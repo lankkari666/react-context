@@ -30,6 +30,7 @@ async function postJson(value, onChangeValue, funcSet) {
 		.finally(() => {
 			onChangeValue('');
 			importJson(funcSet);
+			console.log('Данные отправлены');
 		});
 }
 

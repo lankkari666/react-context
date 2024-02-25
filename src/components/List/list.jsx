@@ -3,9 +3,7 @@ import { useApp } from '../../context/context.jsx';
 
 
 export const List = () => {
-
 	const { setTasks, tasks } = useApp();
-
 	return (
 		<div className="list">
 			<ul>

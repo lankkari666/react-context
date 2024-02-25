@@ -1,9 +1,10 @@
 import { postJson } from '../axiosReq';
 import './sectionAdd.css';
+import { useApp } from '../../context/index.js';
 
 export const SectionAdd = ({ value, onChangeValue, funcSet }) => {
+	const { setTasks } = useApp();
 	return (
-
 		<form className="formAdd">
 			<input
 				className="inputText"
@@ -13,7 +14,7 @@ export const SectionAdd = ({ value, onChangeValue, funcSet }) => {
 				onChange={(e) => onChangeValue(e.target.value)}
 			/>
 			<button
-				onClick={() => postJson(value, onChangeValue, funcSet)}
+				onClick={() => postJson(value, onChangeValue, setTasks)}
 				type="button"
 				className="btn_add"
 				disabled={value.length === 0}
